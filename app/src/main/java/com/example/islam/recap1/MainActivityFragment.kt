@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import kotlinx.android.synthetic.main.fragment_main.*
+import kotlinx.android.synthetic.main.fragment_main.view.*
 
 /**
  * A placeholder fragment containing a simple view.
@@ -17,13 +18,13 @@ class MainActivityFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         val view= inflater.inflate(R.layout.fragment_main, container, false)
-        var imageUrlList= listOf<String>("http://image.tmdb.org/t/p/w185/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg",
-                "http://image.tmdb.org/t/p/w185/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg",
-                "http://image.tmdb.org/t/p/w185/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg",
-                "http://image.tmdb.org/t/p/w185/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg")
-       val recyclerView=view.findViewById(R.id.images_recycler_view) as RecyclerView
-       recyclerView.layoutManager= LinearLayoutManager(activity)
-       recyclerView.adapter=ImageRecyclerViewAdapter(imageUrlList)
+        var imageUrlList= listOf<String>("http://image.tmdb.org/t/p/w780/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg",
+                "http://image.tmdb.org/t/p/w780/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg",
+                "http://image.tmdb.org/t/p/w780/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg",
+                "http://image.tmdb.org/t/p/w780/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg")
+
+       view.images_recycler_view?.layoutManager= LinearLayoutManager(activity)
+       view.images_recycler_view?.adapter=ImageRecyclerViewAdapter(imageUrlList)
         return  view
     }
 }
