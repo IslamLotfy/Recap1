@@ -2,25 +2,25 @@ package com.example.islam.recap1
 
 
 data class Response(
-    val page: Int,
-    val total_results: Int,
-    val total_pages: Int,
-    val results: List<Result>
+    var page: Int,
+    var total_results: Int,
+    var total_pages: Int,
+    var results: List<Result>
 )
 
 data class Result(
-    val vote_count: Int,
-    val id: Int,
-    val video: Boolean,
-    val vote_average: Double,
-    val title: String,
-    val popularity: Double,
-    val poster_path: String,
-    val original_language: String,
-    val original_title: String,
-    val genre_ids: List<Int>,
-    val backdrop_path: String,
-    val adult: Boolean,
-    val overview: String,
-    val release_date: String
+    var vote_count: Int,
+    var id: Int,
+    var video: Boolean,
+    var vote_average: Double,
+    var title: String,
+    var popularity: Double,
+    var poster_path: String,
+    var original_language: String,
+    var original_title: String,
+    var genre_ids: List<Int>,
+    var backdrop_path: String,
+    var adult: Boolean,
+    var overview: String,
+    var release_date: String
 )
